@@ -116,10 +116,10 @@ class SEOEditorMetaDescriptionColumn extends GridFieldDataColumns implements
     {
         $errors = [];
 
-        if (strlen($record->MetaDescription) < 10) {
+        if (strlen($record->MetaDescription ?? '') < 10) {
             $errors[] = 'seo-editor-error-too-short';
         }
-        if (strlen($record->MetaDescription) > 160) {
+        if (strlen($record->MetaDescription ?? '') > 160) {
             $errors[] = 'seo-editor-error-too-long';
         }
         if (strlen(SiteTree::get()->filter('MetaDescription', $record->MetaDescription)->count() > 1)) {

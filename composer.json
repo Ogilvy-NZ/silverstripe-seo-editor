@@ -11,8 +11,9 @@
         }
     ],
     "require": {
-        "silverstripe/cms": "^4.0",
-        "kinglozzer/metatitle": "^2.0"
+        "php": "^8.1",
+        "silverstripe/cms": "^5",
+        "kinglozzer/metatitle": "^3"
     },
     "extra": {
         "expose": [
@@ -26,5 +27,11 @@
         }
     },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true
+        }
+    }
 }

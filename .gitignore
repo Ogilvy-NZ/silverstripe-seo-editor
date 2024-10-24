@@ -1,1 +1,5 @@
 .idea/
+/vendor
+/resources
+/composer.lock
+/public/_resources
